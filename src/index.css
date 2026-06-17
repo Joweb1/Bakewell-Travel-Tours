@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif-display: "Playfair Display", serif;
+  
+  --color-primary-navy: #0F172A;
+  --color-secondary-gold: #D4AF37;
+  --color-accent-blue: #3B82F6;
+  --color-text-dark: #111827;
+}
+
+/* Custom premium scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Base custom styles to guarantee professional rendering */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+}
+
+body {
+  color: var(--color-text-dark);
+  background-color: #f8fafc; /* Editorial off-white background */
+  overflow-x: hidden;
+}
+
+/* Elegant editorial styling helper classes */
+.editorial-border-gold {
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.editorial-title-gradient {
+  background: linear-gradient(to right, #0F172A, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

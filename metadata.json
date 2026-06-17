@@ -1,0 +1,6 @@
+{
+  "name": "Bakewell Travel & Tours",
+  "description": "A world-class, premium travel consultancy website specializing in flight ticket booking, tour booking, and visa processing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
