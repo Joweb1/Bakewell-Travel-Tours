@@ -49,13 +49,7 @@ export default function Navbar({ currentPage, setCurrentPage, onOpenConsultation
 
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-white shadow-md py-3.5 border-b border-slate-200 text-slate-900'
-          : currentPage === 'home'
-            ? 'bg-transparent py-5/5 text-white'
-            : 'bg-white border-b border-slate-200 py-5 text-[#0F172A]'
-      }`}
+      className="fixed top-0 left-0 right-0 z-40 bg-white border-b border-slate-200/80 py-4 text-[#0F172A] shadow-sm"
       id="main-navigation"
     >
       {/* Scroll Progress Bar */}
@@ -72,17 +66,15 @@ export default function Navbar({ currentPage, setCurrentPage, onOpenConsultation
             onClick={() => handleNavClick('home')}
             className="flex items-center space-x-3 text-left focus:outline-none group cursor-pointer"
           >
-            <div className="w-10 h-10 bg-[#0F172A] flex items-center justify-center border border-slate-800 shadow-sm transition-transform group-hover:scale-105">
-              <div className="w-5 h-5 border-t-2 border-r-2 border-[#D4AF37] rotate-45 translate-y-1 -translate-x-1"></div>
+            <div className="w-10 h-10 bg-[#0F172A] flex items-center justify-center border border-[#D4AF37]/35 shadow-sm transition-transform group-hover:scale-105">
+              <span className="text-xl font-extrabold font-serif-display text-[#D4AF37] leading-none">B</span>
             </div>
             <div className="flex flex-col">
-              <span className={`text-lg font-bold font-display tracking-tighter leading-none uppercase ${
-                isDarkHeader ? 'text-white' : 'text-[#0F172A]'
-              }`}>
+              <span className="text-lg font-bold font-display tracking-tight leading-none text-[#0F172A] uppercase">
                 BAKEWELL
               </span>
-              <span className="text-[9px] tracking-[0.3em] font-medium text-[#D4AF37] uppercase leading-none mt-1">
-                Travel & Tours
+              <span className="text-[9px] tracking-[0.16em] font-semibold text-[#D4AF37] uppercase leading-none mt-1.5 font-display">
+                Tours & Travels
               </span>
             </div>
           </button>
@@ -98,9 +90,7 @@ export default function Navbar({ currentPage, setCurrentPage, onOpenConsultation
                   className={`relative py-2 text-[11px] font-bold uppercase tracking-widest transition-colors cursor-pointer font-display ${
                     isActive 
                       ? 'text-[#D4AF37]' 
-                      : isDarkHeader
-                        ? 'text-slate-350 hover:text-white'
-                        : 'text-slate-650 hover:text-slate-950'
+                      : 'text-slate-650 hover:text-slate-950'
                   }`}
                 >
                   <span>{item.label}</span>
@@ -120,9 +110,7 @@ export default function Navbar({ currentPage, setCurrentPage, onOpenConsultation
           <div className="hidden lg:flex items-center space-x-6">
             <a 
               href="tel:289-428-7927"
-              className={`flex items-center space-x-2 text-[11px] transition-colors font-mono tracking-wider ${
-                isDarkHeader ? 'text-slate-350 hover:text-white' : 'text-slate-650 hover:text-slate-950'
-              }`}
+              className="flex items-center space-x-2 text-[11px] transition-colors font-mono tracking-wider text-slate-650 hover:text-slate-950"
             >
               <div className="w-7 h-7 rounded-sm bg-slate-100 flex items-center justify-center border border-slate-200">
                 <Phone size={11} className="text-[#D4AF37]" />
@@ -132,11 +120,7 @@ export default function Navbar({ currentPage, setCurrentPage, onOpenConsultation
 
             <button
               onClick={onOpenConsultation}
-              className={`px-6 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors cursor-pointer rounded-none border border-transparent ${
-                isDarkHeader 
-                  ? 'bg-[#D4AF37] hover:bg-[#c2a032] text-slate-950 hover:shadow-lg hover:shadow-yellow-950/10' 
-                  : 'bg-[#0F172A] hover:bg-slate-800 text-white'
-              }`}
+              className="px-6 py-2.5 text-[11px] font-bold uppercase tracking-widest transition-colors cursor-pointer rounded-none border border-transparent bg-[#0F172A] hover:bg-slate-800 text-white"
             >
               Book Consultation
             </button>
@@ -146,11 +130,7 @@ export default function Navbar({ currentPage, setCurrentPage, onOpenConsultation
           <div className="flex items-center space-x-3 lg:hidden">
             <a 
               href="tel:289-428-7927"
-              className={`w-9 h-9 rounded-none flex items-center justify-center border ${
-                isDarkHeader 
-                  ? 'bg-slate-800/85 border-slate-700/50 text-white' 
-                  : 'bg-slate-100 border-slate-200 text-slate-800'
-              }`}
+              className="w-9 h-9 rounded-none flex items-center justify-center border bg-slate-100 border-slate-200 text-slate-800"
               aria-label="Call Bakewell Support"
             >
               <Phone size={14} className="text-[#D4AF37]" />
@@ -158,11 +138,7 @@ export default function Navbar({ currentPage, setCurrentPage, onOpenConsultation
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className={`p-2 rounded-none border ${
-                isDarkHeader 
-                  ? 'bg-slate-800/85 text-slate-200 hover:text-white border-slate-700/50' 
-                  : 'bg-slate-100 text-slate-800 hover:text-slate-950 border-slate-200'
-              } cursor-pointer`}
+              className="p-2 rounded-none border bg-slate-100 text-slate-800 hover:text-slate-950 border-slate-200 cursor-pointer"
               aria-label="Open primary menu"
             >
               {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -180,11 +156,7 @@ export default function Navbar({ currentPage, setCurrentPage, onOpenConsultation
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className={`lg:hidden border-t overflow-hidden ${
-              isDarkHeader 
-                ? 'bg-slate-950 border-slate-800' 
-                : 'bg-white border-slate-200'
-            }`}
+            className="lg:hidden border-t overflow-hidden bg-white border-slate-200"
           >
             <div className="px-4 py-6 space-y-4">
               <div className="grid grid-cols-1 gap-2">
@@ -196,25 +168,21 @@ export default function Navbar({ currentPage, setCurrentPage, onOpenConsultation
                       onClick={() => handleNavClick(item.id)}
                       className={`text-left px-4 py-3 rounded-none text-xs font-bold font-display tracking-widest uppercase transition-colors flex items-center justify-between ${
                         isActive
-                          ? isDarkHeader 
-                            ? 'bg-slate-800 text-[#D4AF37]'
-                            : 'bg-slate-100 text-[#0F172A]'
-                          : isDarkHeader
-                            ? 'text-slate-350 hover:bg-slate-900/50 hover:text-white'
-                            : 'text-slate-650 hover:bg-slate-50 hover:text-slate-950'
+                          ? 'bg-slate-100 text-[#0F172A]'
+                          : 'text-slate-650 hover:bg-slate-50 hover:text-slate-950'
                       }`}
                     >
                       <span>{item.label}</span>
-                      <Globe size={14} className={isActive ? 'text-[#D4AF37]' : isDarkHeader ? 'text-slate-600' : 'text-slate-400'} />
+                      <Globe size={14} className={isActive ? 'text-[#D4AF37]' : 'text-slate-400'} />
                     </button>
                   );
                 })}
               </div>
 
-              <div className={`pt-4 border-t space-y-3 ${isDarkHeader ? 'border-slate-850' : 'border-slate-100'}`}>
+              <div className="pt-4 border-t space-y-3 border-slate-100">
                 <div className="flex items-center space-x-3 px-4 py-1">
                   <Phone size={15} className="text-[#D4AF37]" />
-                  <a href="tel:289-428-7927" className={`font-semibold text-xs font-mono ${isDarkHeader ? 'text-slate-300' : 'text-slate-800'}`}>
+                  <a href="tel:289-428-7927" className="font-semibold text-xs font-mono text-slate-800">
                     289-428-7927
                   </a>
                 </div>

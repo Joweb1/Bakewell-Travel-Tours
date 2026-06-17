@@ -53,7 +53,7 @@ export default function Footer({ setCurrentPage, onOpenConsultation }: FooterPro
           <div className="space-y-4">
             <div className="flex items-center space-x-3 text-left">
               <div className="w-9 h-9 bg-[#0F172A] flex items-center justify-center border border-[#D4AF37]/30">
-                <div className="w-4 h-4 border-t-2 border-r-2 border-[#D4AF37] rotate-45 translate-y-0.5 -translate-x-0.5"></div>
+                <span className="text-base font-extrabold font-serif-display text-[#D4AF37] leading-none">B</span>
               </div>
               <div>
                 <span className="block text-sm font-bold font-display tracking-widest text-[#D4AF37] uppercase">

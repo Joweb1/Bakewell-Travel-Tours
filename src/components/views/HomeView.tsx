@@ -31,15 +31,18 @@ export default function HomeView({ onOpenConsultation, setCurrentPage }: HomeVie
     <div id="homepage-view" className="font-sans bg-[#F8FAFC]">
       
       {/* 1. HERO SECTION (EDITORIAL DUAL-AXIS CONTRAST) */}
-      <section className="relative min-h-[95vh] flex flex-col lg:flex-row items-stretch overflow-hidden border-b border-slate-200">
+      <section className="relative min-h-[95vh] pt-20 lg:pt-24 flex flex-col lg:flex-row items-stretch overflow-hidden border-b border-slate-200">
         
         {/* Left Editorial Slate Panel */}
         <div className="w-full lg:w-1/2 p-8 sm:p-12 lg:p-20 flex flex-col justify-center relative z-10 bg-white">
-          <div className="w-12 h-1 bg-[#D4AF37] mb-8"></div>
+          <div className="w-12 h-1 bg-[#D4AF37] mb-6"></div>
+          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[#D4AF37] block mb-4 font-display">
+            Bakewell Travel & Tours Limited
+          </span>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-serif-display text-[#0F172A] leading-[1.1] tracking-tight mb-6">
-            Explore The <span className="italic font-normal text-slate-800">World</span> <br className="hidden sm:block" />
-            <span className="text-[#3B82F6]">With Confidence.</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold font-serif-display text-[#0F172A] leading-[1.15] tracking-tight mb-6">
+            Explore The <span className="italic font-normal font-serif text-[#D4AF37]">World</span> <br className="hidden sm:block" />
+            With <span className="italic font-normal font-serif">Absolute</span> Confidence.
           </h1>
           
           <p className="text-sm sm:text-base text-slate-600 mb-10 leading-relaxed lg:pr-12">
