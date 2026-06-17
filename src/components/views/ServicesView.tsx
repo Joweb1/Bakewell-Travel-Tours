@@ -30,9 +30,9 @@ export default function ServicesView({ onOpenConsultation }: ServicesViewProps) 
       icon: Compass,
       coverUrl: 'https://images.unsplash.com/photo-1540962351504-03099e0a754b?auto=format&fit=crop&q=80&w=1200',
       tagline: 'Authentic Canada Experiences & Curated International Leisure',
-      desc: 'Our bespoke tour team crafts highly tailored journeys based on your specific travel values. From the rocky, emerald-green peaks of Banff National Park to the historic cobblestone sectors of Quebec and majestic coastal floatplane tours in Vancouver, every destination card is fully managed to exceed the ultimate expectations of high-net-worth clients.',
+      desc: 'Our dedicated tour team crafts highly tailored journeys based on your specific travel values. From the rocky, emerald-green peaks of Banff National Park to the historic cobblestone sectors of Quebec and majestic coastal floatplane tours in Vancouver, every destination card is fully managed to exceed the ultimate expectations of high-net-worth clients.',
       categories: [
-        { name: 'Bespoke Vacation Packages', desc: 'Handcrafted luxury accommodation, private vehicles, and specialized local guides.' },
+        { name: 'Tailored Vacation Packages', desc: 'Handcrafted luxury accommodation, private vehicles, and specialized local guides.' },
         { name: 'Multi-generational Family Tours', desc: 'Balanced, stress-free pacing with curated educational, culinary, and historic excursions.' },
         { name: 'Exotic Honeymoon Trips', desc: 'Uncompromised privacy, romantic ocean hideaways, and celebratory amenities.' },
         { name: 'Guided Adventure & Outdoors', desc: 'Helicopter alpine flightseeing, glacier scaling, and deep-wilderness fishing.' }
@@ -65,7 +65,7 @@ export default function ServicesView({ onOpenConsultation }: ServicesViewProps) 
             Executive Services Directory
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold font-serif-display tracking-tight text-white">
-            Bespoke Portfolios For Discerning Clients
+            Exclusive Portfolios For Discerning Clients
           </h1>
           <p className="text-xs sm:text-sm text-slate-350 max-w-2xl mx-auto leading-relaxed">
             Discover how Bakewell Travel & Tours Limited positions expert advisory, precise visa audits, and premium aviation logistics as a singular, unified platform.

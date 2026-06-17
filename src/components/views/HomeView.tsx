@@ -46,7 +46,7 @@ export default function HomeView({ onOpenConsultation, setCurrentPage }: HomeVie
           </h1>
           
           <p className="text-sm sm:text-base text-slate-600 mb-10 leading-relaxed lg:pr-12">
-            Your premier travel partner for bespoke flight reservations, expert visa processing, and curated global tours. Experience luxury redefined through personalized guidance and absolute accuracy.
+            Your premier travel partner for premium flight reservations, expert visa processing, and curated global tours. Experience luxury redefined through personalized guidance and absolute accuracy.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
@@ -116,7 +116,7 @@ export default function HomeView({ onOpenConsultation, setCurrentPage }: HomeVie
               />
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent text-white">
                 <p className="text-[9px] uppercase tracking-widest font-bold font-display text-[#D4AF37]">Featured</p>
-                <p className="text-sm font-bold font-serif-display">Bespoke Journeys</p>
+                <p className="text-sm font-bold font-serif-display">Exclusive Journeys</p>
               </div>
             </div>
           </motion.div>
@@ -192,7 +192,7 @@ export default function HomeView({ onOpenConsultation, setCurrentPage }: HomeVie
               Our Advisory Pillars
             </span>
             <h2 className="text-3xl font-extrabold font-serif-display text-slate-900 tracking-tight">
-              Bespoke Services For Seamless Journeys
+              Premium Services For Seamless Journeys
             </h2>
             <p className="text-sm text-slate-500 mt-3.5 leading-relaxed">
               We move away from automated search interfaces to offer meticulous, direct support for all aspects of booking and documentation.
@@ -427,6 +427,168 @@ export default function HomeView({ onOpenConsultation, setCurrentPage }: HomeVie
         </div>
       </section>
 
+      {/* 6.5 INTERACTIVE BRAND SEARCH & ORGANIC SEO CELL */}
+      <section className="py-20 bg-slate-900 text-white border-b border-slate-950 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto relative z-10">
+          
+          <div className="text-center max-w-xl mx-auto mb-10">
+            <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-[#D4AF37] block mb-2 font-display">
+              Advanced Organic Discoverability
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold font-serif-display text-white tracking-tight leading-tight">
+              Our Dynamic Search Profile
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-400 mt-3 leading-relaxed">
+              Explore our verified Google Search index rendering. Underneath our primary ranking sits a specialized network of interactive call-to-actions. Click any Sitelink below to jump directly to page structures.
+            </p>
+          </div>
+
+          {/* Simulated Google Search Result Frame */}
+          <div className="bg-slate-950 p-5 sm:p-8 rounded-none border border-slate-800/80 shadow-2xl relative overflow-hidden group">
+            {/* Ambient gold background radial gradient */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 blur-3xl rounded-full" />
+            
+            {/* Indexing status header */}
+            <div className="flex items-center justify-between border-b border-slate-800 pb-4 mb-5 text-slate-400 text-xs font-mono">
+              <div className="flex items-center space-x-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-[9px] tracking-widest text-[#D4AF37] font-bold uppercase font-display">Active Search Index</span>
+              </div>
+              <div className="hidden sm:flex items-center space-x-2 text-[9px] text-slate-500 uppercase tracking-wider">
+                <span>Trust Rating: 99% Stable</span>
+                <span>•</span>
+                <span>Positions: Rank #1 Organic</span>
+              </div>
+            </div>
+
+            {/* Main Result */}
+            <div className="space-y-4 text-left">
+              
+              <div className="space-y-1">
+                {/* Brand Favicon / Destination indicator */}
+                <div className="flex items-center space-x-2.5">
+                  <div className="w-7 h-7 rounded-none bg-slate-900 border border-[#D4AF37]/30 flex items-center justify-center">
+                    <span className="text-[11px] font-extrabold font-serif-display text-[#D4AF37] leading-none">B</span>
+                  </div>
+                  <div>
+                    <span className="block text-xs font-mono text-slate-350 leading-none">https://www.bakewelltravel.com</span>
+                    <span className="block text-[9px] text-slate-500 leading-none mt-1">Bakewell Tours & Travels</span>
+                  </div>
+                </div>
+                
+                {/* Organic Search Header CTA */}
+                <h3 className="text-lg sm:text-xl font-bold font-serif-display text-[#58a6ff] hover:underline cursor-pointer pt-1">
+                  Bakewell Travel &amp; Tours Limited | Premium Global Travel Consultancy
+                </h3>
+              </div>
+
+              {/* Rich snippet Meta description text */}
+              <p className="text-xs text-slate-350 leading-relaxed max-w-3xl">
+                Discover custom priority flight procurement, certified passport &amp; visa validation audits, and hand-crafted luxury holiday tours. Work directly with experienced local consultants with direct, uncompromised 24/7 human desks.
+              </p>
+
+              {/* Schema rich data badges */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-slate-900/50 p-3.5 border border-slate-800/60 text-[11px] font-mono">
+                <div>
+                  <span className="text-[9px] text-slate-500 block uppercase font-mono">Immigration Success</span>
+                  <span className="font-semibold text-[#D4AF37]">99.4% Approved</span>
+                </div>
+                <div>
+                  <span className="text-[9px] text-slate-500 block uppercase font-mono">Turnaround Standard</span>
+                  <span className="font-semibold text-[#D4AF37]">&lt; 24 Hour Audits</span>
+                </div>
+                <div>
+                  <span className="text-[9px] text-slate-500 block uppercase font-mono">Assistance Model</span>
+                  <span className="font-semibold text-[#D4AF37]">100% Certified Agents</span>
+                </div>
+                <div>
+                  <span className="text-[9px] text-slate-500 block uppercase font-mono">Offered Destinations</span>
+                  <span className="font-semibold text-[#D4AF37]">Canada &amp; Europe Specialists</span>
+                </div>
+              </div>
+
+              {/* Advanced Clickable Custom Sitelinks */}
+              <div className="space-y-3 pt-4">
+                <div className="border-t border-slate-800 pt-3 flex items-center justify-between">
+                  <h4 className="text-[10px] uppercase tracking-widest text-[#D4AF37] font-bold font-display">
+                    Interactive Sitelinks &amp; Direct Actions
+                  </h4>
+                  <span className="text-[9px] font-mono text-slate-500 hidden sm:inline">SELECT AN ORGANIC BINDING ACTION</span>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  
+                  {/* Sitelink 1 */}
+                  <button 
+                    onClick={() => onOpenConsultation('Flight & Visa Inquiries')}
+                    className="group/item p-3 bg-[#0F172A] hover:bg-[#D4AF37]/5 border border-slate-850 hover:border-[#D4AF37]/35 text-left transition-all rounded-none cursor-pointer"
+                  >
+                    <span className="block text-xs font-bold text-[#58a6ff] group-hover/item:underline flex items-center justify-between">
+                      <span>Book Immediate Advisory</span>
+                      <span className="text-[9px] px-1.5 py-0.5 bg-emerald-500/10 text-emerald-400 font-mono font-normal tracking-wide uppercase">Open Widget</span>
+                    </span>
+                    <span className="block text-[10px] text-slate-400 mt-1 leading-relaxed">
+                      Lock down priority flight reservations, tourist permits, and documentation support profiles.
+                    </span>
+                  </button>
+
+                  {/* Sitelink 2 */}
+                  <button 
+                    onClick={() => {
+                      setCurrentPage('services');
+                      window.scrollTo({ top: 0, behavior: 'instant' });
+                    }}
+                    className="group/item p-3 bg-[#0F172A] hover:bg-[#D4AF37]/5 border border-slate-850 hover:border-[#D4AF37]/35 text-left transition-all rounded-none cursor-pointer"
+                  >
+                    <span className="block text-xs font-bold text-[#58a6ff] group-hover/item:underline flex items-center justify-between">
+                      <span>Explore Global Excursions</span>
+                      <span className="text-[9px] px-1.5 py-0.5 bg-blue-500/10 text-[#58a6ff] font-mono font-normal tracking-wide uppercase">Tours Page</span>
+                    </span>
+                    <span className="block text-[10px] text-slate-400 mt-1 leading-relaxed">
+                      Custom itineraries targeting elite retreats from Rocky Mountain views to historic Quebec cities.
+                    </span>
+                  </button>
+
+                  {/* Sitelink 3 */}
+                  <button 
+                    onClick={() => {
+                      setCurrentPage('about');
+                      window.scrollTo({ top: 0, behavior: 'instant' });
+                    }}
+                    className="group/item p-3 bg-[#0F172A] hover:bg-[#D4AF37]/5 border border-slate-850 hover:border-[#D4AF37]/35 text-left transition-all rounded-none cursor-pointer"
+                  >
+                    <span className="block text-xs font-bold text-[#58a6ff] group-hover/item:underline flex items-center justify-between">
+                      <span>About Bakewell Travel</span>
+                      <span className="text-[9px] px-1.5 py-0.5 bg-slate-800 text-slate-350 font-mono font-normal tracking-wide uppercase">Our Story</span>
+                    </span>
+                    <span className="block text-[10px] text-slate-400 mt-1 leading-relaxed">
+                      Founded with a clear vision: uncompromised travel arrangements steered by professional personnel.
+                    </span>
+                  </button>
+
+                  {/* Sitelink 4 */}
+                  <a 
+                    href="tel:289-428-7927"
+                    className="group/item p-3 bg-[#0F172A] hover:bg-[#D4AF37]/5 border border-slate-850 hover:border-[#D4AF37]/35 text-left transition-all block rounded-none cursor-pointer animate-pulse-subtle"
+                  >
+                    <span className="block text-xs font-bold text-[#58a6ff] group-hover/item:underline flex items-center justify-between2">
+                      <span>Dial Support 24/7 Desk</span>
+                    </span>
+                    <span className="block text-[10px] text-slate-400 mt-1 leading-relaxed">
+                      Link with verified booking consultants live in Ontario, Canada via +1 (289) 428-7927 support line.
+                    </span>
+                  </a>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
       {/* 7. TESTIMONIAL PREVIEW */}
       <section className="py-20 bg-[#F8FAFC]/40" id="testimonials-mini">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -483,7 +645,7 @@ export default function HomeView({ onOpenConsultation, setCurrentPage }: HomeVie
             </h2>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Do not leave complex flight routes, immigration permits, and bespoke wilderness itineraries to speculative algorithms. Work directly with certified Bakewell travel consultants and secure peace of mind.
+              Do not leave complex flight routes, immigration permits, and custom wilderness itineraries to speculative algorithms. Work directly with certified Bakewell travel consultants and secure peace of mind.
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">

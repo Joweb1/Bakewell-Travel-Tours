@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PageId } from './types';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -18,6 +18,56 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<PageId>('home');
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
   const [presetService, setPresetService] = useState<string>('');
+
+  // Reset scroll position and optimize SEO metadata dynamically on page transition
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Page-specific Advanced SEO Meta Definitions
+    const seoMap: Record<PageId, { title: string; desc: string }> = {
+      home: {
+        title: 'Bakewell Travel & Tours Limited | Premium Global Travel Consultancy',
+        desc: 'Discover premium flight procurement, expert visa validation audits, and tailormade luxury vacation tours with Bakewell Travel & Tours Limited.'
+      },
+      services: {
+        title: 'Premium Services Portfolio | Bakewell Travel & Tours Limited',
+        desc: 'Explore our certified visa application audits, priority global ticket reservations, and curated leisure vacation packages for high-value clients.'
+      },
+      about: {
+        title: 'Corporate Profile & Professional Philosophy | Bakewell Travel',
+        desc: 'Operating with absolute accuracy and premium stewardship. Meet our certified advisors and explore our classic travel solutions.'
+      },
+      testimonials: {
+        title: 'Client Reviews & Endorsements | Bakewell Tours & Travels',
+        desc: 'Hear from corporate executives, business professionals, and luxury leisure travelers who experience uncompromised accuracy with Bakewell.'
+      },
+      contact: {
+        title: 'Secure Consultation Desk | Bakewell Travel & Tours Limited',
+        desc: 'Engage with a certified travel advisor. Request immediate documentation audits or a custom flight schedule appraisal today.'
+      }
+    };
+
+    const activeSeo = seoMap[currentPage] || seoMap.home;
+
+    // 1. Update Title
+    document.title = activeSeo.title;
+
+    // 2. Update Description
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', activeSeo.desc);
+    }
+
+    // 3. Update OG Properties
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', activeSeo.title);
+    }
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) {
+      ogDesc.setAttribute('content', activeSeo.desc);
+    }
+  }, [currentPage]);
 
   const handleOpenConsultation = (serviceName?: string) => {
     if (serviceName) {

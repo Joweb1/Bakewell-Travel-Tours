@@ -9,13 +9,13 @@ export default function ProcessTimeline() {
     {
       title: '1. Contact Us',
       subtitle: 'Initiate Correspondence',
-      description: 'Reach out via our digital secure form, direct phone line, or bespoke WhatsApp widget to request an evaluation.',
+      description: 'Reach out via our digital secure form, direct phone line, or official WhatsApp widget to request an evaluation.',
       details: ['Average response under 2 hours', 'Specialist matching based on intent', 'Initial documentation pre-check list'],
       icon: Mail
     },
     {
       title: '2. Professional Consultation',
-      subtitle: 'Bespoke Travel Mapping',
+      subtitle: 'Signature Travel Mapping',
       description: 'Engage with a seasoned travel advisor to audit your documentation and design custom flight routings and itinerary outlines.',
       details: ['Comprehensive dossier evaluation', 'Custom hotel and aircraft allocations', 'Transparent budget and advisory schedules'],
       icon: MessageSquareText

@@ -122,7 +122,7 @@ export default function ConsultationModal({ isOpen, onClose, presetService }: Co
           <div className="bg-[#0F172A] text-white p-6 relative flex items-center justify-between border-b border-[#D4AF37]/35">
             <div>
               <span className="text-xs font-semibold uppercase tracking-widest text-[#D4AF37] mb-1 block font-display">
-                Bespoke Travel Advisory Service
+                Signature Travel Advisory Service
               </span>
               <h3 className="text-xl sm:text-2xl font-semibold font-serif-display tracking-tight text-white leading-tight">
                 Schedule Advisory Session
@@ -234,7 +234,7 @@ export default function ConsultationModal({ isOpen, onClose, presetService }: Co
                     {/* Service needed */}
                     <div>
                       <label className="block text-[10px] font-bold text-slate-705 mb-1.5 uppercase tracking-widest font-display">
-                        Bespoke Service Needed
+                        Exclusive Service Needed
                       </label>
                       <select
                         value={serviceNeeded}

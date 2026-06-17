@@ -81,7 +81,7 @@ export default function AboutView() {
                     Est. 2026
                   </span>
                   <span className="block text-[9px] uppercase tracking-wider text-slate-400 mt-1">
-                    Bespoke Travel Solutions
+                    Tailored Travel Solutions
                   </span>
                 </div>
               </motion.div>

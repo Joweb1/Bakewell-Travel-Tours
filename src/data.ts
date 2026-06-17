@@ -4,7 +4,7 @@ export const SERVICES: ServiceItem[] = [
   {
     id: 'flights',
     title: 'Flight Ticket Booking',
-    description: 'Bespoke flight procurement with priority routings, luxury cabins, and seamless connections.',
+    description: 'Tailored flight procurement with priority routings, luxury cabins, and seamless connections.',
     longDescription: 'At Bakewell, flight booking is treated as an art. We do not simply search for fares; we curate the optimal journey. From charter access and private suites to first-class cabins and complex multi-destination itineraries, we negotiate directly with leading airlines to offer unparalleled convenience, priority boarding arrangements, and complete flight monitoring.',
     iconName: 'PlaneTakeoff',
     imageUrl: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=800',
@@ -109,7 +109,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote: 'The personalized Niagara wine tour was sensory heaven. We felt safe, perfectly pampered, and handled by true local experts who genuinely respect premium travel standards.',
     rating: 5,
     imageUrl: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200',
-    serviceUsed: 'Bespoke Tour Package'
+    serviceUsed: 'Tailored Tour Package'
   },
   {
     id: 'test-4',
