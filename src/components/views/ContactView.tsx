@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { FAQS } from '../../data';
 import { ConsultationRequest } from '../../types';
+import { sendBookingEmails } from '../../utils/emailService';
 import { 
   Phone, Mail, Globe, MapPin, CheckCircle, HelpCircle, 
   ChevronDown, ClipboardList, Clock 
@@ -56,33 +57,48 @@ export default function ContactView() {
 
     setIsSubmitting(true);
 
-    // Simulated dispatch workflow
-    setTimeout(() => {
-      const newRequest: ConsultationRequest = {
-        id: 'contact_' + Date.now(),
-        fullName,
-        email,
-        phone,
-        serviceNeeded,
-        destination,
-        travelDate,
-        message,
-        submittedAt: new Date().toISOString()
-      };
+    const newRequest: ConsultationRequest = {
+      id: 'contact_' + Date.now(),
+      fullName,
+      email,
+      phone,
+      serviceNeeded,
+      destination,
+      travelDate,
+      message,
+      submittedAt: new Date().toISOString()
+    };
 
-      // Real persistency integration to localStorage
-      try {
-        const existing = localStorage.getItem('bakewell_consultations');
-        const list = existing ? JSON.parse(existing) : [];
-        list.push(newRequest);
-        localStorage.setItem('bakewell_consultations', JSON.stringify(list));
-      } catch (err) {
-        console.error('Storage error:', err);
-      }
+    // Real persistency integration to localStorage
+    try {
+      const existing = localStorage.getItem('bakewell_consultations');
+      const list = existing ? JSON.parse(existing) : [];
+      list.push(newRequest);
+      localStorage.setItem('bakewell_consultations', JSON.stringify(list));
+    } catch (err) {
+      console.error('Storage error:', err);
+    }
 
+    // Dispatch Emails via EmailJS
+    sendBookingEmails({
+      fullName,
+      email,
+      phone,
+      serviceNeeded,
+      destination,
+      travelDate,
+      message
+    })
+    .then(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 1100);
+    })
+    .catch((err) => {
+      console.error('Email dispatch failed:', err);
+      // Fallback: succeed anyway since it's saved locally
+      setIsSubmitting(false);
+      setIsSuccess(true);
+    });
   };
 
   const handleFormReset = () => {
@@ -176,8 +192,8 @@ export default function ContactView() {
                   <div>
                     <h4 className="font-bold text-slate-900 uppercase font-display tracking-wider text-[11px]">Electronic Mail</h4>
                     <span className="block text-slate-500 mt-1">General Operations:</span>
-                    <a href="mailto:info@bakewelltraveltours.com" className="text-slate-900 font-bold tracking-wide mt-0.5 block hover:text-[#D4AF37] transition-colors font-mono">
-                      info@bakewelltraveltours.com
+                    <a href="mailto:info@bakewelltraveltours.ca" className="text-slate-900 font-bold tracking-wide mt-0.5 block hover:text-[#D4AF37] transition-colors font-mono">
+                      info@bakewelltraveltours.ca
                     </a>
                   </div>
                 </div>
@@ -189,8 +205,8 @@ export default function ContactView() {
                   </div>
                   <div>
                     <h4 className="font-bold text-slate-900 uppercase font-display tracking-wider text-[11px]">Verified Web URL</h4>
-                    <a href="https://bakewelltraveltours.com" className="text-slate-900 font-bold block mt-1 hover:text-[#D4AF37] transition-colors font-mono">
-                      bakewelltraveltours.com
+                    <a href="https://bakewelltraveltours.ca" className="text-slate-900 font-bold block mt-1 hover:text-[#D4AF37] transition-colors font-mono">
+                      bakewelltraveltours.ca
                     </a>
                   </div>
                 </div>
@@ -309,6 +325,7 @@ export default function ContactView() {
                           <option>Flight Ticket Booking</option>
                           <option>Tour Booking & Experiences</option>
                           <option>Visa Processing & Procurement</option>
+                          <option>Employment Visa Support</option>
                           <option>General Travel Consultation</option>
                         </select>
                       </div>

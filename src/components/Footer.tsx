@@ -142,8 +142,8 @@ export default function Footer({ setCurrentPage, onOpenConsultation }: FooterPro
               </li>
               <li className="flex items-center space-x-2.5">
                 <Mail size={15} className="text-[#D4AF37]" />
-                <a href="mailto:info@bakewelltraveltours.com" className="hover:text-[#D4AF37] transition-colors">
-                  info@bakewelltraveltours.com
+                <a href="mailto:info@bakewelltraveltours.ca" className="hover:text-[#D4AF37] transition-colors">
+                  info@bakewelltraveltours.ca
                 </a>
               </li>
             </ul>
@@ -191,7 +191,7 @@ export default function Footer({ setCurrentPage, onOpenConsultation }: FooterPro
             <span className="hover:text-slate-400 transition-colors cursor-pointer">Privacy Charter</span>
             <span className="hover:text-slate-400 transition-colors cursor-pointer">Luggage Directive</span>
             <span className="hover:text-slate-400 transition-colors cursor-pointer">Air Passenger Rights</span>
-            <span className="font-mono text-slate-600 font-normal normal-case">Domain: bakewelltraveltours.com</span>
+            <span className="font-mono text-slate-600 font-normal normal-case">Domain: bakewelltraveltours.ca</span>
           </div>
         </div>
       </div>

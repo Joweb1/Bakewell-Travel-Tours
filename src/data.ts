@@ -42,6 +42,20 @@ export const SERVICES: ServiceItem[] = [
       'Highly professional executive and business travel visa support',
       'One-on-one document review and mock interview preparation'
     ]
+  },
+  {
+    id: 'employment-visa',
+    title: 'Employment Visa Support',
+    description: 'Strategic corporate mobility, work permit acquisition, and executive immigration audits.',
+    longDescription: 'Securing international talent or transitioning your executive team requires flawless regulatory alignment. Our premier employment visa department handles end-to-end work permit procurement. We orchestrate employer sponsorship verification, labor market impact assessments (LMIA), intra-company transfer credentials, and post-arrival compliance, ensuring seamless organizational mobility.',
+    iconName: 'Briefcase',
+    imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800',
+    features: [
+      'Executive & specialized talent work permit coordination',
+      'Comprehensive employer compliance audits & LMIA navigation',
+      'Intra-company transfer & investor class immigration support',
+      'Dedicated corporate mobility consultant for corporate accounts'
+    ]
   }
 ];
 

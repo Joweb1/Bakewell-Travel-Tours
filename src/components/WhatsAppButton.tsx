@@ -11,6 +11,7 @@ export default function WhatsAppButton() {
     'Flight Ticket Booking',
     'Tour Packages & Experiences',
     'Visa Processing Support',
+    'Employment Visa Support',
     'General Consultation'
   ];
 

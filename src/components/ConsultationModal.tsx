@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Calendar, User, Mail, Phone, MapPin, MessageSquare, CheckCircle, ShieldCheck } from 'lucide-react';
 import { ConsultationRequest } from '../types';
+import { sendBookingEmails } from '../utils/emailService';
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -55,33 +56,48 @@ export default function ConsultationModal({ isOpen, onClose, presetService }: Co
 
     setIsSubmitting(true);
 
-    // Simulate luxury dispatching
-    setTimeout(() => {
-      const newRequest: ConsultationRequest = {
-        id: 'req_' + Date.now(),
-        fullName,
-        email,
-        phone,
-        serviceNeeded,
-        destination,
-        travelDate,
-        message,
-        submittedAt: new Date().toISOString()
-      };
+    const newRequest: ConsultationRequest = {
+      id: 'req_' + Date.now(),
+      fullName,
+      email,
+      phone,
+      serviceNeeded,
+      destination,
+      travelDate,
+      message,
+      submittedAt: new Date().toISOString()
+    };
 
-      // Save to local storage for authentic persistence
-      try {
-        const existing = localStorage.getItem('bakewell_consultations');
-        const list = existing ? JSON.parse(existing) : [];
-        list.push(newRequest);
-        localStorage.setItem('bakewell_consultations', JSON.stringify(list));
-      } catch (err) {
-        console.error('Storage error:', err);
-      }
+    // Save to local storage for authentic persistence
+    try {
+      const existing = localStorage.getItem('bakewell_consultations');
+      const list = existing ? JSON.parse(existing) : [];
+      list.push(newRequest);
+      localStorage.setItem('bakewell_consultations', JSON.stringify(list));
+    } catch (err) {
+      console.error('Storage error:', err);
+    }
 
+    // Dispatch Emails via EmailJS
+    sendBookingEmails({
+      fullName,
+      email,
+      phone,
+      serviceNeeded,
+      destination,
+      travelDate,
+      message
+    })
+    .then(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 1200);
+    })
+    .catch((err) => {
+      console.error('Email dispatch failed:', err);
+      // Fallback: succeed anyway since it's saved locally
+      setIsSubmitting(false);
+      setIsSuccess(true);
+    });
   };
 
   const handleReset = () => {
@@ -244,6 +260,7 @@ export default function ConsultationModal({ isOpen, onClose, presetService }: Co
                         <option>Flight Ticket Booking</option>
                         <option>Tour Booking & Experiences</option>
                         <option>Visa Processing & Procurement</option>
+                        <option>Employment Visa Support</option>
                         <option>General Travel Consultation</option>
                       </select>
                     </div>

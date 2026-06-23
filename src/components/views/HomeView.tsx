@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ArrowRight, Plane, Compass, FileCheck, CheckCircle2, ShieldCheck, Star } from 'lucide-react';
+import { ArrowRight, Plane, Compass, FileCheck, CheckCircle2, ShieldCheck, Star, Briefcase } from 'lucide-react';
 import { SERVICES, DESTINATIONS, TRUST_BADGES, WHY_CHOOSE_REASONS } from '../../data';
 import ProcessTimeline from '../ProcessTimeline';
 import TestimonialSlider from '../TestimonialSlider';
@@ -22,6 +22,8 @@ export default function HomeView({ onOpenConsultation, setCurrentPage }: HomeVie
         return <Compass size={24} className="text-[#D4AF37]" />;
       case 'FileCheck':
         return <FileCheck size={24} className="text-[#D4AF37]" />;
+      case 'Briefcase':
+        return <Briefcase size={24} className="text-[#D4AF37]" />;
       default:
         return <Compass size={24} className="text-[#D4AF37]" />;
     }
@@ -657,7 +659,7 @@ export default function HomeView({ onOpenConsultation, setCurrentPage }: HomeVie
               </button>
               
               <a 
-                href="mailto:info@bakewelltraveltours.com"
+                href="mailto:info@bakewelltraveltours.ca"
                 className="px-8 py-4 rounded-none border border-white/20 bg-white/5 hover:bg-white/10 text-white font-bold text-xs uppercase tracking-widest transition-colors text-center"
               >
                 Inquire Directly

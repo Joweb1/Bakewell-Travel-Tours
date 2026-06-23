@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Plane, Compass, FileCheck, CheckCircle2, PhoneCall, ShieldCheck, Mail } from 'lucide-react';
+import { Plane, Compass, FileCheck, CheckCircle2, PhoneCall, ShieldCheck, Mail, Briefcase } from 'lucide-react';
 import { SERVICES } from '../../data';
 
 interface ServicesViewProps {
@@ -50,6 +50,20 @@ export default function ServicesView({ onOpenConsultation }: ServicesViewProps) 
         { name: 'Student Visa Support', desc: 'Careful alignment with institutional acceptances, study permit guidelines, and financial backing proofs.' },
         { name: 'Corporate Business Visa', desc: 'Fast-tracked approvals for executive travel, trade summits, and multi-entry business clearances.' },
         { name: 'Pre-flight Travel Consultations', desc: 'One-on-one document audit, mock interview coaching, and consular guidance.' }
+      ]
+    },
+    {
+      id: 'employment-visa',
+      title: 'Employment Visa Support',
+      icon: Briefcase,
+      coverUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200',
+      tagline: 'Corporate Mobility & Seamless Global Recruitment Channels',
+      desc: 'Transitioning corporate executives, technical specialists, or seasonal employee groups across international boundaries demands absolute alignment with national labor policies. Bakewell acts as a premium liaison between sponsoring enterprises, legal teams, and immigration control departments. We perform meticulous pre-checks on credential valuations, employer compliance dossiers, and labor market declarations to bypass administrative delays.',
+      categories: [
+        { name: 'Work Permit Procurement', desc: 'End-to-end management of temporary resident work permit filings and extensions.' },
+        { name: 'Employer Sponsorship Audits', desc: 'Detailed validation checks of business registries, labor shortages, and corporate tax certificates.' },
+        { name: 'Intra-Company Transfers', desc: 'Expedited routes for executives, senior managers, or specialized knowledge workers transitioning between international offices.' },
+        { name: 'Corporate Mobility Support', desc: 'Consolidated immigration management templates and dedicated advisory contacts for high-frequency hiring accounts.' }
       ]
     }
   ];
@@ -116,7 +130,7 @@ export default function ServicesView({ onOpenConsultation }: ServicesViewProps) 
                   
                   <div>
                     <span className="text-[10px] font-bold text-[#D4AF37] uppercase tracking-widest block font-mono">
-                      Department {sIdx + 1} of 3
+                      Department {sIdx + 1} of {detailedServices.length}
                     </span>
                     <h2 className="text-2xl sm:text-3xl font-extrabold font-serif-display text-slate-900 tracking-tight mt-1.5">
                       {section.title}
