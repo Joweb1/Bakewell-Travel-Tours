@@ -44,6 +44,6 @@ jobs:
           server-dir: public_html/
           # Only sync changed files to prevent bandwidth/quota limits and speed up deployment
           dangerous-clean-slate: false
-          # SFTP or FTPS is recommended if your server supports it
-          protocol: ftp
+          # FTPS is recommended for secure encrypted file transfer
+          protocol: ftps
           port: 21
