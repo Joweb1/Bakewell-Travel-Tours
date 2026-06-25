@@ -473,7 +473,7 @@ export default function HomeView({ onOpenConsultation, setCurrentPage }: HomeVie
                     <span className="text-[11px] font-extrabold font-serif-display text-[#D4AF37] leading-none">B</span>
                   </div>
                   <div>
-                    <span className="block text-xs font-mono text-slate-350 leading-none">https://www.bakewelltravel.com</span>
+                    <span className="block text-xs font-mono text-slate-350 leading-none">https://www.bakewelltraveltours.ca</span>
                     <span className="block text-[9px] text-slate-500 leading-none mt-1">Bakewell Tours & Travels</span>
                   </div>
                 </div>
