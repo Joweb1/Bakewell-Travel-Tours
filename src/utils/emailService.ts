@@ -15,7 +15,6 @@ export async function sendBookingEmails(params: SendEmailParams): Promise<boolea
   const companyTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_COMPANY;
   const clientTemplateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID_CLIENT;
   const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-  const privateKey = import.meta.env.VITE_EMAILJS_PRIVATE_KEY;
 
   if (!serviceId || !publicKey) {
     console.warn('EmailJS keys not configured. Local storage registry bypass only.');
@@ -47,7 +46,6 @@ export async function sendBookingEmails(params: SendEmailParams): Promise<boolea
             service_id: serviceId,
             template_id: companyTemplateId,
             user_id: publicKey,
-            ...(privateKey ? { accessToken: privateKey } : {}),
             template_params: templateParams,
           }),
         })
@@ -64,7 +62,6 @@ export async function sendBookingEmails(params: SendEmailParams): Promise<boolea
             service_id: serviceId,
             template_id: clientTemplateId,
             user_id: publicKey,
-            ...(privateKey ? { accessToken: privateKey } : {}),
             template_params: templateParams,
           }),
         })
